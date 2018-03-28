@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>旋转木马（相片旋转）</title>
+<script src="jquery-1.8.3.js"></script>
+<link rel="stylesheet" href="css/reset.css"/>
+<style>
+#stage{
+	width:900px;
+	min-height:100px;
+	margin:0 auto;
+	padding:100px 50px;
+	perspective:800px;
+	/*-webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -ms-transform:perspective(800px) ;*/
+	position:relative;
+	}
+#container{
+	width:128px;
+	height:100px;
+	margin-left:-64px;
+	transition:all 1s;
+	/*-webkit-transition: -webkit-transform 1s;
+    -moz-transition: -webkit-transform 1s;
+    -ms-transition: -webkit-transform 1s;*/
+	transform-style:preserve-3d;
+	/*-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;*/
+	position:absolute;
+	left:50%;
+	}
+img{
+	width:128px;
+	box-shadow:0 1px 3px rgba(0,0,0,5);
+	position:absolute;
+	bottom:0;
+	}
+img:nth-child(0){
+	transform:rotateY(0deg) translateZ(300px);
+	/*-webkit-transform: rotateY(0deg) translateZ(300px);
+    -moz-transform: rotateY(0deg) translateZ(300px);
+    -ms-transform: rotateY(0deg) translateZ(300px);*/
+	}
+img:nth-child(1){
+	transform:rotateY(40deg) translateZ(300px);
+	}
+img:nth-child(2){
+	transform:rotateY(80deg) translateZ(300px);
+	}
+img:nth-child(3){
+	transform:rotateY(120deg) translateZ(300px);
+	}
+img:nth-child(4){
+	transform:rotateY(160deg) translateZ(300px);
+	}
+img:nth-child(5){
+	transform:rotateY(200deg) translateZ(300px);
+	}
+img:nth-child(6){
+	transform:rotateY(240deg) translateZ(300px);
+	}
+img:nth-child(7){
+	transform:rotateY(280deg) translateZ(300px);
+	}
+img:nth-child(8){
+	transform:rotateY(320deg) translateZ(300px);
+	}
+img:nth-child(9){
+	transform:rotateY(360deg) translateZ(300px);
+	}
+</style>
+</head>
+
+<body>
+<div id="stage">
+    <div id="container" onClick="change()">
+        <img src="旋转木马/1.jpg"/>
+        <img src="旋转木马/2.jpg"/>
+        <img src="旋转木马/3.jpg"/>
+        <img src="旋转木马/4.jpg"/>
+        <img src="旋转木马/5.jpg"/>
+        <img src="旋转木马/6.jpg"/>
+        <img src="旋转木马/7.jpg"/>
+        <img src="旋转木马/8.jpg"/>
+        <img src="旋转木马/9.jpg"/>
+    </div>
+</div>
+<script>
+var i=1;
+function change(){
+	var deg=-40;
+	document.getElementById("container").style.transform="rotateY(" + (deg * i++) + "deg)";
+	}
+	//       alert( 120 / Math.tan(20 / 180 * Math.PI)) 329...;
+       /* var transform = function (element, value, key)
+        {
+            key = key || "Transform";
+            ["Moz", "O", "Ms", "Webkit", ""].forEach(function (prefix)
+            {
+                element.style[prefix + key] = value;
+            });
+
+            return element;
+        }
+
+
+        $(function ()
+        {
+            var deg = -40 , i = 1;
+            $("#container").click(function ()
+            {
+                transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
+            });
+        });*/
+
+
+
+</script>
+</body>
+</html>

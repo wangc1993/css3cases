@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>旋转木马（自动旋转）</title>
+<link rel="stylesheet" href="css/reset.css"/>
+<style>
+.container{
+	width:128px;
+	height:100px;
+	margin:100px auto;
+	position:relative;
+	transform-style:preserve-3d;
+	transform: rotateX(-10deg);
+	animation-name: animate;
+    animation-duration: 10s; /*动画执行次数*/
+    animation-iteration-count: infinite; /*动画持续时间：无限 */
+    animation-timing-function: linear;
+	/*transition:all 2s;*/
+	}
+/*定义一个动画*/
+            @keyframes animate {
+                0%{
+                    transform: rotateX(-10deg) rotateY(0deg) ;
+                }
+                100%{
+                    transform: rotateX(-10deg) rotateY(360deg) ;
+                }
+            }
+img{
+	width:128px;
+	position:absolute;
+	bottom:0;
+	}
+img:nth-child(0){
+	transform:rotateY(0deg) translateZ(300px);
+	/*-webkit-transform: rotateY(0deg) translateZ(300px);
+    -moz-transform: rotateY(0deg) translateZ(300px);
+    -ms-transform: rotateY(0deg) translateZ(300px);*/
+	}
+img:nth-child(1){
+	transform:rotateY(40deg) translateZ(300px);
+	}
+img:nth-child(2){
+	transform:rotateY(80deg) translateZ(300px);
+	}
+img:nth-child(3){
+	transform:rotateY(120deg) translateZ(300px);
+	}
+img:nth-child(4){
+	transform:rotateY(160deg) translateZ(300px);
+	}
+img:nth-child(5){
+	transform:rotateY(200deg) translateZ(300px);
+	}
+img:nth-child(6){
+	transform:rotateY(240deg) translateZ(300px);
+	}
+img:nth-child(7){
+	transform:rotateY(280deg) translateZ(300px);
+	}
+img:nth-child(8){
+	transform:rotateY(320deg) translateZ(300px);
+	}
+img:nth-child(9){
+	transform:rotateY(360deg) translateZ(300px);
+	}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <img src="旋转木马/1.jpg"/>
+  <img src="旋转木马/2.jpg"/>
+  <img src="旋转木马/3.jpg"/>
+  <img src="旋转木马/4.jpg"/>
+  <img src="旋转木马/5.jpg"/>
+  <img src="旋转木马/6.jpg"/>
+  <img src="旋转木马/7.jpg"/>
+  <img src="旋转木马/8.jpg"/>
+  <img src="旋转木马/9.jpg"/>
+</div>
+</body>
+</html>

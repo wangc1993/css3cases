@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style type="text/css">
+        .product{
+            width: 238px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .title{
+            height: 36px;
+            text-align: center;
+            background-color: #ff0036;
+        }
+        .title span{
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            height: 36px;
+            line-height: 36px;
+        }
+        .title1{
+            height: 24px;
+            line-height: 24px;
+            font-size: 22px;
+            margin-top: 19px;
+            color: #000;
+        }
+        a.info{
+            display: block;
+            height: 220px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .title2{
+            height: 14px;
+            line-height: 14px;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #888;
+        }
+        .img{
+            display: block;
+            width: 140px;
+            height: 140px;
+            margin: 9px auto 0;
+            position: relative;
+        }
+        .mask{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 140px;
+            height: 140px;
+            background-color: #07B;
+            border-radius: 70px;
+            opacity: .03;
+        }
+        img{
+            display: block;
+            position: absolute;
+            width: 100%;
+            transition-delay: 10ms;/*反向过度*/
+            transition-duration: 0.3s;
+        }
+        a:hover img{
+            transform: scale(1.1, 1.1);
+            transition: 0.3s transform;
+        }
+        .seperate{
+            height: 1px;
+            width: 200px;
+            background-color: #eee;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="product">
+    <div class="title">
+        <span>手机酷玩</span>
+    </div>
+    <a href="#nowhere" class="info">
+        <div class="title1">手机馆</div>
+        <div class="title2">限时抢600元手机券</div>
+        <div class="img">
+            <div class="mask"></div>
+            <img src="images/上.png">
+        </div>
+    </a>
+    <div class="seperate"></div>
+    <a href="#nowhere" class="info">
+        <div class="title1">酷玩街</div>
+        <div class="title2">潮炫创意智能</div>
+        <div class="img">
+            <div class="mask"></div>
+            <img src="images/下.jpg">
+        </div>
+    </a>
+</div>
+</body>
+</html>

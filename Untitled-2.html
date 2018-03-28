@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+  <canvas id="dwew" width="800" height="600"></canvas>
+  <script>
+    window.onload=function init(){
+		var canvas=document.getElementById("dwew");
+		var context=canvas.getContext("2d");
+		var degrees=36;
+		context.fillRect(0,0,100,100);
+		context.save();
+		context.translate(200,200);
+		context.fillStyle="rgba(50,50,50,.5)";
+		for(var i=0;i<360/degrees;i++){
+			context.fillRect(0,0,100,100);
+			context.rotate(degreesToRadians(degrees));
+			}
+		context.restore();
+		}
+	function degreesToRadians(degrees){
+	return (degrees*Math.PI)/180;
+	}
+  </script>
+</body>
+</html>
